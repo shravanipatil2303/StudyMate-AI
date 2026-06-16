@@ -1,212 +1,168 @@
-# 📚 RAG PDF Question Answering System
+# 🎓 StudyMate AI
 
-## Overview
+Your Personal Exam Preparation Assistant powered by RAG (Retrieval-Augmented Generation).
 
-This project is a Retrieval-Augmented Generation (RAG) application that answers user questions based on information retrieved from PDF and text documents.
-
-The system loads documents, splits them into chunks, generates embeddings using Sentence Transformers, stores them in a FAISS vector database, retrieves the most relevant context for a query, and uses a Groq-powered LLM to generate accurate answers.
+StudyMate AI helps students upload PDF notes and ask questions directly from their study material. The system retrieves relevant content from the uploaded PDF and generates accurate answers using Groq LLM.
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
 
-* PDF document loading
-* Text file loading
-* Document chunking
-* Embedding generation using Sentence Transformers
-* FAISS vector database
-* Semantic search and retrieval
-* Groq LLM integration
-* Context-aware question answering
-* Modular project structure
+🌐 https://studymate-ai-2026.streamlit.app
+
+---
+
+## ✨ Features
+
+### 📄 PDF Upload
+Upload your notes, lecture slides, or study material in PDF format.
+
+### ❓ Question Answering
+Ask questions directly from the uploaded PDF.
+
+### 📝 Short Answer Mode
+Generates concise exam-oriented answers in 4–5 sentences.
+
+### 📚 Detailed Answer Mode
+Generates structured, detailed answers suitable for exam preparation.
+
+### ⚡ Fast AI Responses
+Powered by Groq LLM for low-latency answer generation.
+
+### 🔍 Semantic Search
+Uses vector embeddings and FAISS to retrieve the most relevant content from documents.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Python
-* LangChain
-* FAISS
-* Sentence Transformers
-* Groq API
-* NumPy
-* PyPDF
-* Git & GitHub
+### Frontend
+- Streamlit
+
+### Backend
+- Python
+
+### AI & RAG
+- LangChain
+- FAISS Vector Database
+- Sentence Transformers
+- Groq LLM
+
+### Document Processing
+- PyPDF
 
 ---
 
 ## 📂 Project Structure
 
-```text
-rag-pdf-question-answering/
+```bash
+StudyMate-AI/
 │
-├── data/
-│   ├── pdf/
-│   └── text_files/
-│
-├── notebook/
-│   ├── document.ipynb
-│   └── pdf_loader.ipynb
-│
+├── app.py
 ├── src/
-│   ├── __init__.py
 │   ├── data_loader.py
 │   ├── embedding.py
 │   ├── vectorstore.py
 │   └── search.py
 │
-├── app.py
-├── main.py
+├── data/
+├── notebook/
 ├── requirements.txt
-├── pyproject.toml
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ Installation
 
-```text
-Documents (PDF/TXT)
-        │
-        ▼
-Document Loader
-        │
-        ▼
-Text Chunking
-        │
-        ▼
-Sentence Transformer Embeddings
-        │
-        ▼
-FAISS Vector Store
-        │
-        ▼
-Retriever
-        │
-        ▼
-Groq LLM
-        │
-        ▼
-Generated Answer
-```
-
----
-
-## Installation
-
-### 1. Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/shravanipatil2303/rag-pdf-question-answering.git
-
 cd rag-pdf-question-answering
 ```
 
-### 2. Create Virtual Environment
+### Create Virtual Environment
 
 ```bash
-uv venv
+python -m venv .venv
+```
 
+### Activate Environment
+
+#### Windows
+
+```bash
 .venv\Scripts\activate
 ```
 
-### 3. Install Dependencies
+#### Linux/Mac
 
 ```bash
-uv sync
+source .venv/bin/activate
 ```
 
-or
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Create .env File
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory:
 
 ```env
 GROQ_API_KEY=your_groq_api_key
 ```
 
-### 5. Run Application
+---
+
+## ▶️ Run Application
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
 ---
 
-## Example Queries
+## 📸 Screenshots
 
-### Query
+### Home Page
 
-```text
-What are IoT Communication Models?
-```
+(Add screenshot here)
 
-### Response
+### Question Answering
 
-```text
-1. Device-to-Device (D2D)
-2. Device-to-Cloud
-3. Device-to-Gateway
-4. Back-End Data Sharing
-```
+(Add screenshot here)
 
 ---
 
-### Query
+## 🎯 Current Features
 
-```text
-What are Replacement Algorithms?
-```
-
-### Response
-
-```text
-Replacement algorithms determine which page should be replaced
-when a page fault occurs in memory management.
-Examples include FIFO, LRU, and Optimal Page Replacement.
-```
+- ✅ PDF Upload
+- ✅ RAG-based Question Answering
+- ✅ Short Answers
+- ✅ Detailed Answers
+- ✅ Streamlit Deployment
+- ✅ Groq Integration
 
 ---
 
-## 📸 Project Screenshots
 
-### Query: What are IoT Communication Models?
-
-![IoT Query](ss1.JPG)
-
-The system retrieves relevant document chunks from the FAISS vector store and generates a context-aware answer using Groq LLM.
-
----
-
-### Query: What are Replacement Algorithms?
-
-![Replacement Algorithm Query](ss2.JPG)
-
-The RAG pipeline successfully retrieves information related to memory management concepts and generates an accurate summarized response.
-
----
-
-## Sample Results
-
-| Query | Output |
-|---------|---------|
-| What are IoT Communication Models? | Device-to-Device, Device-to-Cloud, Device-to-Gateway, Back-End Data Sharing |
-| What are Replacement Algorithms? | FIFO, LRU, LFU and other cache/page replacement techniques |
-
-## Author
+## 👩‍💻 Author
 
 **Shravani Patil**
+
+Computer Engineering Student
 
 GitHub: https://github.com/shravanipatil2303
 
 ---
 
-## License
+## ⭐ If you like this project
 
-This project is created for educational and learning purposes.
-
----
+Give it a star on GitHub and share it with fellow students.
