@@ -8,7 +8,7 @@ StudyMate AI helps students upload PDF notes and ask questions directly from the
 
 ## 🚀 Live Demo
 
-🌐 https://studymate-ai-2026.streamlit.app
+🌐 https://studymate-ai2026.streamlit.app
 
 ---
 
